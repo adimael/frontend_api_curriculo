@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Minha API • Meu Currículo em JSON</title>
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+
+        <div class="hero">
+
+            <div class="logo">
+                <i data-lucide="braces"></i>
+            </div>
+
+            <div class="hero-text">
+
+                <h1>Minha API</h1>
+
+                <div class="endpoint">
+
+                    <span class="method">GET</span>
+
+                    <span class="path">/curriculo</span>
+
+                </div>
+
+                <p>
+                    Consulte e pesquise meu currículo através de uma API REST em tempo real.
+                </p>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <section class="search">
+
+        <i data-lucide="search"></i>
+
+        <input
+            id="search"
+            type="search"
+            placeholder="Pesquisar tecnologias, experiências, formação..."
+            autocomplete="off"
+            aria-label="Pesquisar no currículo"
+        >
+
+    </section>
+
+    <section class="browser">
+
+        <div class="browser-header">
+
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="address">
+
+                <i data-lucide="globe"></i>
+
+                <span>
+                    https://vupi.us/adimael/api/curriculo
+                </span>
+
+            </div>
+
+        </div>
+
+        <div
+            id="search-popup"
+            class="search-popup"
+            hidden
+            aria-live="polite"
+        >
+
+            <span id="search-counter">
+                0 resultados
+            </span>
+
+            <div class="search-popup-actions">
+
+                <button
+                    id="previous-result"
+                    type="button"
+                    aria-label="Resultado anterior"
+                >
+                    <i data-lucide="chevron-up"></i>
+                </button>
+
+                <button
+                    id="next-result"
+                    type="button"
+                    aria-label="Próximo resultado"
+                >
+                    <i data-lucide="chevron-down"></i>
+                </button>
+
+                <button
+                    id="close-search"
+                    type="button"
+                    aria-label="Limpar pesquisa"
+                >
+                    <i data-lucide="x"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+        <pre
+            id="json"
+            tabindex="0"
+            aria-live="polite"
+            aria-label="Dados do currículo em formato JSON"
+        ></pre>
+
+    </section>
+
+</div>
+
+</body>
+
+</html>
